@@ -6,7 +6,8 @@ if not present2 then return end
 treesitter.setup({
 	ensure_installed = { "lua" },
 	auto_install = true,
-	highlight = { enable = true }
+	highlight = { enable = true },
+	rainbow = { enable = true, extended_mode = true }
 })
 
 autotag.setup()
