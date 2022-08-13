@@ -74,6 +74,7 @@ packer.startup({
         }
         use {
             'nvim-treesitter/nvim-treesitter',
+            requires = {'windwp/nvim-ts-autotag'},
             run = function()
                 require('nvim-treesitter.install').update({with_sync = true})
             end,
