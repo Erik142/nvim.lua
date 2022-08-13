@@ -5,4 +5,6 @@ if not present then return end
 if not present2 then return end
 
 mason.setup()
-mason_lspconfig.setup({ensure_installed = {"dockerls", "sumneko_lua", "yamlls"}})
+mason_lspconfig.setup({
+    ensure_installed = {"dockerls", "sumneko_lua", "tsserver", "yamlls"}
+})
