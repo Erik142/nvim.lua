@@ -17,16 +17,17 @@ vim.keymap.set("n", "<leader>f", "<cmd> Telescope find_files <CR>", {})
 vim.keymap.set("n", "<leader>lg", "<cmd> Telescope live_grep <CR>", {})
 vim.keymap.set("n", "<leader>gs", "<cmd> Telescope grep_string <CR>", {})
 vim.keymap.set("n", "<leader>h", "<cmd> Telescope help_tags <CR>", {})
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
+vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", {silent = true})
 vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>",
-	{ silent = true })
+               {silent = true})
 vim.keymap.set("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>",
-	{ silent = true })
+               {silent = true})
 vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>",
-	{ silent = true })
+               {silent = true})
 vim.keymap.set("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>",
-	{ silent = true })
-vim.keymap.set("n", "gs", "<Cmd>Lspsaga signature_help<CR>", { silent = true })
-vim.keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
+               {silent = true})
+vim.keymap.set("n", "gs", "<Cmd>Lspsaga signature_help<CR>", {silent = true})
+vim.keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", {silent = true})
 vim.keymap
-		.set("n", "gd", "<cmd>Lspsaga preview_definition<CR>", { silent = true })
+    .set("n", "gd", "<cmd>Lspsaga preview_definition<CR>", {silent = true})
+vim.keymap.set("n", "<leader>sf", "z=", {silent = true}) -- Spellcheck
