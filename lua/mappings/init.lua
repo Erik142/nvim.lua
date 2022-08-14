@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 
+vim.keymap.set("i", "kj", "<Esc>", {})
+vim.keymap.set("i", "jk", "<Esc>", {})
 vim.keymap.set("n", "<leader>c", "<cmd> Bdelete <CR>", {}) -- Close current buffer
 vim.keymap.set("n", "<leader>C", "<C-W>q", {}) -- Close current window
 vim.keymap.set("n", "<leader>v", "<cmd> vsplit <CR>", {}) -- Create vertical split
