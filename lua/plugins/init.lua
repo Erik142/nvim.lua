@@ -111,6 +111,10 @@ packer.startup({
 			requires = { 'folke/twilight.nvim' },
 			config = function() require("plugins.config.zen-mode") end
 		}
+		use {
+			'numToStr/Comment.nvim',
+			config = function() require("plugins.config.comment") end
+		}
 
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
