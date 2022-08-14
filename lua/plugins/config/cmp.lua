@@ -18,7 +18,7 @@ cmp.setup({
 		expand = function(args) require('luasnip').lsp_expand(args.body) end
 	},
 	sources = cmp.config.sources({ { name = "nvim_lsp" }, { name = "luasnip" } },
-		{ name = "buffer" }),
+		{ name = "buffer" }, { name = "path" }),
 	mapping = cmp.mapping.preset.insert({
 		['<C-b>'] = cmp.mapping.scroll_docs(-4),
 		['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -52,12 +52,13 @@ cmp.setup({
 			menu = ({
 				buffer = "[Buffer]",
 				luasnip = "[Snippet]",
-				nvim_lua = "[Lua]"
+				path = "[Path]"
 			}),
 			maxwidth = 50 -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
 		})
 	}
 })
 
-cmp.setup.filetype("markdown",
-	{ sources = cmp.config.sources({ { name = "luasnip" } }) })
+cmp.setup.filetype("markdown", {
+	sources = cmp.config.sources({ { name = "luasnip" }, { name = "path" } })
+})
