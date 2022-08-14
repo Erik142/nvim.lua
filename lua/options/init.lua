@@ -22,5 +22,6 @@ vim.o.autowrite = true
 vim.o.autoread = true
 vim.o.encoding = 'utf-8'
 vim.o.hidden = false
+vim.o.list = false
 
 vim.cmd('colorscheme neosolarized') -- colorscheme

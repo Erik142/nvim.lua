@@ -6,8 +6,8 @@ if not present2 then return end
 
 mason.setup()
 mason_lspconfig.setup({
-	ensure_installed = {
-		"dockerls", "marksman", "prismals", "rust_analyzer", "sumneko_lua", "tsserver",
-		"yamlls"
-	}
+    ensure_installed = {
+        "dockerls", "prismals", "rust_analyzer", "sumneko_lua", "tsserver",
+        "yamlls"
+    }
 })
