@@ -1,4 +1,5 @@
 require("plugins.config.lspconfig.dockerls")
+require("plugins.config.lspconfig.marksman")
 require("plugins.config.lspconfig.prismals")
 require("plugins.config.lspconfig.rust_analyzer")
 require("plugins.config.lspconfig.sumneko_lua")
