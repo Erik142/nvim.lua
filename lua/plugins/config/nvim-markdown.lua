@@ -10,7 +10,7 @@ vim.g.tex_conceal = ""
 vim.g.vim_markdown_math = 1
 
 vim.g.vim_markdown_no_default_key_mappings = 1
-
+vim.cmd('let g:pandoc#syntax#conceal#urls = 1')
 vim.cmd([[augroup pandoc_syntax
-    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+	au! BufNewFile,BufFilePre,BufRead *.md set conceallevel=3
 augroup END]])
