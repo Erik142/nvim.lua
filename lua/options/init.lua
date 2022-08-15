@@ -24,3 +24,4 @@ vim.o.encoding = 'utf-8'
 vim.o.hidden = false
 vim.o.list = true
 vim.o.spelllang = 'en,sv'
+vim.cmd([[set clipboard+=unnamedplus]])
