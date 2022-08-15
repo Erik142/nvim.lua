@@ -124,6 +124,11 @@ packer.startup({
             'goolord/alpha-nvim',
             config = function() require("plugins.config.alpha") end
         }
+        use {
+            'ahmedkhalf/project.nvim',
+            requires = {'nvim-telescope/telescope.nvim'},
+            config = function() require("plugins.config.project") end
+        }
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
