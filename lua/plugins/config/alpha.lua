@@ -35,7 +35,7 @@ theme.section.buttons.val = {
                  ":cd $HOME/Projekt | Telescope find_files<CR>"),
     theme.button("rf", "  > Recent files", ":Telescope oldfiles<CR>"),
     theme.button("rp", "  > Recent projects", ":Telescope projects<CR>"),
-    theme.button("s", "  > Settings", ":e $HOME/.config/nvim/init.lua <CR>"),
+    theme.button("s", "  > Settings", ":e $HOME/.config/nvim/ <CR>"),
     theme.button("q", "  > Quit NVIM", ":qa<CR>")
 }
 
