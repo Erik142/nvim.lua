@@ -120,6 +120,10 @@ packer.startup({
             tag = 'v2.*',
             config = function() require("plugins.config.toggleterm") end
         }
+        use {
+            'goolord/alpha-nvim',
+            config = function() require("plugins.config.alpha") end
+        }
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
