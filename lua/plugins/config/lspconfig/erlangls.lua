@@ -1,4 +1,5 @@
 local present, lspconfig = pcall(require, "lspconfig")
 if not present then return end
+require("plugins.config.lspconfig.common")
 
-lspconfig.erlangls.setup {}
+lspconfig.erlangls.setup {on_attach = On_attach}
