@@ -24,13 +24,17 @@ whichkey.register({
         g = {"<cmd> lua Lazygit_toggle() <CR>", "Toggle lazygit"}
     },
     h = {"<cmd> Telescope help_tags <CR>", "Help"},
-    H = {"<cmd> bufdo Bdelete <CR> <cmd> Alpha <CR>", "Home"},
+    H = {"<cmd>bufdo Bdelete<CR><cmd>Alpha<CR>", "Home"},
     l = {
         name = "Lsp",
         c = {"<cmd> Lspsaga code_action <CR>", "Code actions"},
-        d = {"<cmd> Lspsaga peek_definition <CR>", "Preview definition"}
+        d = {"<cmd> Lspsaga peek_definition <CR>", "Preview definition"},
+        D = {"<cmd> Telescope lsp_definitions <CR>", "Go to definition"},
+        i = {"<cmd> Telescope lsp_implementations <CR>", "Go to implementation"},
+        r = {"<cmd> Telescope lsp_references <CR>", "Find references"}
     },
-    s = {"z=", "Spell check"},
+    p = {"<cmd> Telescope projects <CR>", "Find projects"},
+    s = {"<cmd> Telescope spell_suggest <CR>", "Spell suggest"},
     w = {
         name = "Windows",
         c = {"<C-W>q", "Close window"},
