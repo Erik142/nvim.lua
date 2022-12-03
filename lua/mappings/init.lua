@@ -6,8 +6,6 @@ vim.keymap.set("n", "<leader>z", "<cmd> ZenMode <CR>", {}) -- Close current buff
 vim.keymap.set("n", "<leader>c", "<cmd> Bdelete <CR>", {}) -- Close current buffer
 vim.keymap.set("n", "<leader>C", "<C-W>q", {}) -- Close current window
 vim.keymap.set("n", "<leader>v", "<cmd> vsplit <CR>", {}) -- Create vertical split
-vim.keymap.set("n", "<S-L>", "<cmd> BufferLineCycleNext <CR>", {}) -- Go to next buffer
-vim.keymap.set("n", "<S-H>", "<cmd> BufferLineCyclePrev <CR>", {}) -- Go to previous buffer
 vim.keymap.set("n", "<C-L>", "<C-W>l", {}) -- Go to next buffer
 vim.keymap.set("n", "<C-H>", "<C-W>h", {}) -- Go to previous buffer
 vim.keymap.set("n", "<C-J>", "<C-W>j", {}) -- Go to next buffer
