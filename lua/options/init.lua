@@ -18,12 +18,15 @@ vim.o.softtabstop = 2
 vim.o.smarttab = true
 vim.o.smartindent = true
 vim.o.backup = false
-vim.o.autowrite = true
+vim.o.autowriteall = true
 vim.o.autoread = true
 vim.o.encoding = 'utf-8'
 vim.o.hidden = false
 vim.o.list = true
 vim.o.spelllang = 'en,sv'
+vim.o.hidden = true
+vim.o.confirm = true
+vim.o.expandtabs = true
 vim.cmd([[set clipboard+=unnamedplus]])
 vim.cmd([[if exists("g:neovide")
 	let g:neovide_cursor_animation_length=0
