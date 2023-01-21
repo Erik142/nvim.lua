@@ -26,7 +26,7 @@ vim.o.list = true
 vim.o.spelllang = 'en,sv'
 vim.o.hidden = true
 vim.o.confirm = true
-vim.o.expandtabs = true
+vim.o.expandtab = true
 vim.cmd([[set clipboard+=unnamedplus]])
 vim.cmd([[if exists("g:neovide")
 	let g:neovide_cursor_animation_length=0
