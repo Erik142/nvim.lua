@@ -13,6 +13,7 @@ whichkey.register({
         d = {"<cmd> Bdelete! <CR>", "Delete buffer"},
         s = {"<cmd> Telescope buffers <CR>", "Switch buffer"}
     },
+    e = {"<cmd> NvimTreeToggle <CR>", "Toggle NvimTree"},
     f = {
         name = "Files",
         f = {"<cmd> Telescope find_files <CR>", "Find files"},
