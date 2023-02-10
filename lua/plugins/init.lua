@@ -134,6 +134,12 @@ packer.startup({
             config = function() require("plugins.config.which-key") end
         }
 
+        use {
+            "folke/trouble.nvim",
+            requires = "nvim-tree/nvim-web-devicons",
+            config = function() require("plugins.config.trouble") end
+        }
+
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then require('packer').sync() end
