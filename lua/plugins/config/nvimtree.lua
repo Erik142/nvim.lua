@@ -32,7 +32,11 @@ nvimtree.setup({
                 { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
                 { key = "h",                cb = tree_cb "close_node" }
             }
-        }
+        },
+        width = { max = -1 }
+    },
+    git = {
+        ignore = false
     },
     sync_root_with_cwd = true,
     respect_buf_cwd = true,
