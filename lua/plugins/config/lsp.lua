@@ -7,8 +7,7 @@ if not present2 then return end
 mason.setup()
 mason_lspconfig.setup({
     ensure_installed = {
-        "clangd", "cmake", "dockerls", "gopls", "jdtls", "jsonls", "prismals",
-        "pyright", "rust_analyzer", "sumneko_lua", "svelte", "tsserver",
-        "yamlls"
+        "clangd", "cmake", "dockerls", "gopls", "jdtls", "jsonls", "lua_ls",
+        "prismals", "pyright", "rust_analyzer", "svelte", "tsserver", "yamlls"
     }
 })

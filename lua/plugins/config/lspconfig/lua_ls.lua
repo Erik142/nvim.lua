@@ -3,7 +3,7 @@ if not present then return end
 
 require("plugins.config.lspconfig.common")
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
 	on_attach = On_attach,
 	capabilities = Capabilities,
 	settings = {
