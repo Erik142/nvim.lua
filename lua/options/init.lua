@@ -25,6 +25,7 @@ vim.o.hidden = true
 vim.o.confirm = true
 vim.o.expandtab = true
 vim.cmd([[set clipboard+=unnamedplus]])
+vim.cmd([[set shell=/bin/bash]])
 vim.cmd([[if exists("g:neovide")
 	let g:neovide_cursor_animation_length=0
 	let g:neovide_cursor_trail_length=0
