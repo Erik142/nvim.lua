@@ -29,3 +29,5 @@ vim.cmd([[if exists("g:neovide")
 	let g:neovide_cursor_animation_length=0
 	let g:neovide_cursor_trail_length=0
 endif]])
+
+vim.cmd([[au BufRead,BufNewFile *.go set expandtab tabstop=2]])
