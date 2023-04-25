@@ -36,6 +36,7 @@ nvimtree.setup({
         width = { max = -1 }
     },
     git = {
+        enable = false,
         ignore = false
     },
     sync_root_with_cwd = true,
