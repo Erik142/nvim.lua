@@ -24,6 +24,8 @@ vim.o.spelllang = 'en,sv'
 vim.o.hidden = true
 vim.o.confirm = true
 vim.o.expandtab = true
+vim.o.mouse = ""
+
 vim.cmd([[set clipboard+=unnamedplus]])
 vim.cmd([[set shell=/bin/bash]])
 vim.cmd([[if exists("g:neovide")
