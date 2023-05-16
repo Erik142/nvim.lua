@@ -5,9 +5,11 @@ return {
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.lua_format,
+				null_ls.builtins.formatting.clang_format,
 				null_ls.builtins.diagnostics.yamllint,
-				null_ls.builtins.formatting.prettier, null_ls.builtins.formatting.gofmt
+				null_ls.builtins.formatting.prettier,
+				null_ls.builtins.formatting.gofmt
 			}
 		})
-	end,
+	end
 }
