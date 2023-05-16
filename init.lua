@@ -177,6 +177,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
+      'p00f/nvim-ts-rainbow',
     },
     build = ":TSUpdate",
   },
@@ -359,6 +360,7 @@ require('nvim-treesitter.configs').setup {
       },
     },
   },
+  rainbow = { enable = true, extended_mode = true },
 }
 
 -- Diagnostic keymaps
