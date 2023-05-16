@@ -2,7 +2,6 @@
 --
 -- Use your language server to automatically format your code on save.
 -- Adds additional commands as well to manage the behavior
-
 return {
   'neovim/nvim-lspconfig',
   config = function()
@@ -21,7 +20,8 @@ return {
     local get_augroup = function(client)
       if not _augroups[client.id] then
         local group_name = 'kickstart-lsp-format-' .. client.name
-        local id = vim.api.nvim_create_augroup(group_name, { clear = true })
+        local id = vim.api.nvim_create_augroup(group_name,
+          { clear = true })
         _augroups[client.id] = id
       end
 
@@ -32,7 +32,8 @@ return {
     --
     -- See `:help LspAttach` for more information about this autocmd event.
     vim.api.nvim_create_autocmd('LspAttach', {
-      group = vim.api.nvim_create_augroup('kickstart-lsp-attach-format', { clear = true }),
+      group = vim.api.nvim_create_augroup('kickstart-lsp-attach-format',
+        { clear = true }),
       -- This is where we attach the autoformatting for reasonable clients
       callback = function(args)
         local client_id = args.data.client_id
@@ -46,7 +47,7 @@ return {
 
         -- Tsserver usually works poorly. Sorry you work with bad languages
         -- You can remove this line if you know what you're doing :)
-        if client.name == 'tsserver' then
+        if client.name == 'tsserver' or client.name == 'clangd' then
           return
         end
 
@@ -64,11 +65,11 @@ return {
               async = false,
               filter = function(c)
                 return c.id == client.id
-              end,
+              end
             }
-          end,
+          end
         })
-      end,
+      end
     })
-  end,
+  end
 }
