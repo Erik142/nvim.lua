@@ -284,9 +284,10 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics,
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = {
-    'bash', 'c', 'cmake', 'cpp', 'dockerfile', 'fish', 'go', 'gomod',
-    'gosum', 'json', 'latex', 'lua', 'prisma', 'python', 'rust', 'sql',
-    'svelte', 'terraform', 'tsx', 'typescript', 'vimdoc', 'vim', 'yaml'
+    'bash', 'c', 'cmake', 'cpp', 'dart', 'dockerfile', 'fish', 'go',
+    'gomod', 'gosum', 'json', 'latex', 'lua', 'prisma', 'python', 'rust',
+    'sql', 'svelte', 'terraform', 'tsx', 'typescript', 'vimdoc', 'vim',
+    'yaml'
   },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
@@ -405,6 +406,16 @@ local on_attach = function(_, bufnr)
       desc = 'Format current buffer with LSP'
     })
 end
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+    if client.name == "terraformls" then
+      client.server_capabilities.semanticTokensProvider = nil
+    end
+  end
+});
 
 -- Enable the following language servers
 --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
