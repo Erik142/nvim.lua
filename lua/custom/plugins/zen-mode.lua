@@ -8,5 +8,6 @@ return {
 			tmux = { enabled = false },
 			options = { enabled = true, ruler = false }
 		}
-	}
+	},
+	lazy = true
 }

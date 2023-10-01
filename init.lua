@@ -84,14 +84,18 @@ require('lazy').setup({
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim'
-    }
+    },
+    lazy = true,
+    event = 'BufEnter'
   }, {
   -- Autocompletion
   'hrsh7th/nvim-cmp',
   dependencies = {
     'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip'
-  }
+  },
+  lazy = true,
+  event = 'InsertEnter'
 },     -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',  opts = {} }, {
   -- Adds git releated signs to the gutter, as well as utilities for managing changes
@@ -114,7 +118,8 @@ require('lazy').setup({
         require('gitsigns').preview_hunk,
         { buffer = bufnr, desc = '[P]review [H]unk' })
     end
-  }
+  },
+  lazy = true
 }, {
   -- Theme inspired by Atom
   'navarasu/onedark.nvim',
@@ -131,15 +136,19 @@ require('lazy').setup({
       component_separators = '|',
       section_separators = ''
     }
-  }
+  },
+  lazy = true,
+  event = 'BufEnter'
 }, {
   -- Add indentation guides even on blank lines
   'lukas-reineke/indent-blankline.nvim',
   -- Enable `lukas-reineke/indent-blankline.nvim`
   -- See `:help indent_blankline.txt`
-  opts = { char = '┊', show_trailing_blankline_indent = false }
-},                                        -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} }, -- Fuzzy Finder (files, lsp, etc)
+  opts = { char = '┊', show_trailing_blankline_indent = false },
+  lazy = true,
+  event = 'BufEnter'
+},                                                                            -- "gc" to comment visual regions/lines
+  { 'numToStr/Comment.nvim', opts = {}, lazy = true, event = 'InsertEnter' }, -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
@@ -515,5 +524,7 @@ vim.o.backup = false
 vim.o.autowriteall = true
 vim.o.autoread = true
 vim.o.encoding = 'utf-8'
+
+vim.api.nvim_set_hl(0, 'MiniTrailspace', { default = true, link = 'Error' })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

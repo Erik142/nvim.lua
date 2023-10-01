@@ -11,5 +11,7 @@ return {
 				null_ls.builtins.formatting.gofmt
 			}
 		})
-	end
+	end,
+	lazy = true,
+	event = 'InsertEnter'
 }
