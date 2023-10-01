@@ -35,11 +35,13 @@ return {
 			theme.button("f", "  > Find file",
 				":cd $HOME/Projekt | Telescope find_files<CR>"),
 			theme.button("rf", "  > Recent files", ":Telescope oldfiles<CR>"),
-			theme.button("rp", "  > Recent projects", ":Telescope projects<CR>"),
-			theme.button("s", "  > Settings", ":cd $HOME/.config/nvim/ | Telescope find_files <CR>"),
+			theme.button("rp", "  > Recent projects",
+				":Telescope projects<CR>"),
+			theme.button("s", "  > Settings",
+				":cd $HOME/.config/nvim/ | Telescope find_files <CR>"),
 			theme.button("q", "  > Quit NVIM", ":qa<CR>")
 		}
 
 		alpha.setup(theme.config)
-	end
+	end,
 }
