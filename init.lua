@@ -35,7 +35,7 @@ I hope you enjoy your Neovim journey,
 
 P.S. You can delete this when you're done too. It's your config now :)
 --]]
-     -- Set <space> as the leader key
+-- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
@@ -48,7 +48,7 @@ local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
     'git', 'clone', '--filter=blob:none',
-    'https://github.com/folke/lazy.nvim.git', '--branch=stable',     -- latest stable release
+    'https://github.com/folke/lazy.nvim.git', '--branch=stable', -- latest stable release
     lazypath
   }
 end
@@ -96,7 +96,7 @@ require('lazy').setup({
   },
   lazy = true,
   event = 'InsertEnter'
-},     -- Useful plugin to show you pending keybinds.
+}, -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',  opts = {} }, {
   -- Adds git releated signs to the gutter, as well as utilities for managing changes
   'lewis6991/gitsigns.nvim',
@@ -149,7 +149,7 @@ require('lazy').setup({
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
-  },   -- Fuzzy Finder Algorithm which requires local dependencies to be built.
+  }, -- Fuzzy Finder Algorithm which requires local dependencies to be built.
   -- Only load if `make` is available. Make sure you have the system
   -- requirements installed.
   {
@@ -312,7 +312,7 @@ require('nvim-treesitter.configs').setup {
   textobjects = {
     select = {
       enable = true,
-      lookahead = true,       -- Automatically jump forward to textobj, similar to targets.vim
+      lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
       keymaps = {
         -- You can use the capture groups defined in textobjects.scm
         ['aa'] = '@parameter.outer',
@@ -325,7 +325,7 @@ require('nvim-treesitter.configs').setup {
     },
     move = {
       enable = true,
-      set_jumps = true,       -- whether to set jumps in the jumplist
+      set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
         [']m'] = '@function.outer',
         [']]'] = '@class.outer'
@@ -441,7 +441,7 @@ local servers = {
   svelte = {},
   terraformls = {},
   texlab = {},
-  tsserver = {},
+  ts_ls = {},
   yamlls = {},
 
   lua_ls = {
