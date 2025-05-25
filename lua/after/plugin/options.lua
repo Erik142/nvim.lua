@@ -7,8 +7,9 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.scrolloff = 10
 vim.o.swapfile = false
+vim.o.tabline = ''
 
-vim.cmd([[if exists("g:neovide")
+vim.cmd [[if exists("g:neovide")
 	let g:neovide_cursor_animation_length=0
 	let g:neovide_cursor_trail_length=0
-endif]])
+endif]]
