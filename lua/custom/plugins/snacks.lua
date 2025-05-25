@@ -4,7 +4,7 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
-    picker = { enabled = true },
+    picker = { enabled = true, main = { file = false, current = true } },
     indent = { enabled = true },
     image = { enabled = true },
   },
