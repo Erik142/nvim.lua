@@ -6,6 +6,7 @@ return {
   opts = {
     picker = { enabled = true },
     indent = { enabled = true },
+    image = { enabled = true },
   },
   keys = {
     {
