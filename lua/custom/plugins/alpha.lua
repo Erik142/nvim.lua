@@ -32,11 +32,11 @@ return {
 
     theme.section.buttons.val = {
       theme.button('e', '  > New file', ':ene <BAR> startinsert <CR>'),
-      theme.button('f', '  > Find file', ':cd $HOME/Projekt | Telescope find_files<CR>'),
-      theme.button('rf', '  > Recent files', ':Telescope oldfiles<CR>'),
-      theme.button('rp', '  > Recent projects', ':Telescope projects<CR>'),
+      theme.button('f', ' > Find file', ':cd $HOME/Projekt | Telescope find_files<CR>'),
+      theme.button('rf', '  > Recent files', ':lua Snacks.picker.recent()<CR>'),
+      theme.button('rp', '  > Recent projects', ':lua Snacks.picker.projects()<CR>'),
       theme.button('s', '  > Settings', ':cd $HOME/.config/nvim/ | :lua Snacks.picker.files() <CR>'),
-      theme.button('q', '  > Quit NVIM', ':qa<CR>'),
+      theme.button('q', '󰈆 > Quit NVIM', ':qa<CR>'),
     }
 
     alpha.setup(theme.config)
