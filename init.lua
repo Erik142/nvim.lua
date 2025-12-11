@@ -665,23 +665,22 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         ansiblels = {},
-        azure_pipelines_ls = {},
         bashls = {},
         clangd = {},
         cmake = {},
         docker_compose_language_service = {},
         dockerls = {},
-        gh_actions_ls = {},
         ginko_ls = {},
         gopls = {},
         jsonls = {},
         marksman = {},
-        postgres_lsp = {},
         protols = {},
         pyright = {},
         rust_analyzer = {},
         tflint = {},
         yamlls = {},
+        yamllint = {},
+        yamlfmt = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -724,6 +723,7 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'terraform-ls',
+        'postgres-language-server',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
